@@ -1,7 +1,7 @@
 {
-  "name": "numberToWord",
+  "name": "@softwarerero/numbertoword",
   "version": "1.0.0",
-  "description": "Convert numbers to letters",
+  "description": "Convert numbers to words",
   "scripts": {
     "test": "mocha --require esm",
     "testw": "mocha --watch --require esm"
