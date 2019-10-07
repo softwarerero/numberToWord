@@ -1,6 +1,6 @@
 {
   "name": "@softwarerero/numbertoword",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert numbers to words",
   "scripts": {
     "test": "mocha --require esm",
