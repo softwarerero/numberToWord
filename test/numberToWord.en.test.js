@@ -1,5 +1,5 @@
-import assert from 'assert'
-import numberToWord from '../numberToWord.en.js'
+const assert = require('assert')
+const numberToWord = require('../numberToWord.en.js')
 
 const equal = (no, text) => () => assert.equal(numberToWord(no), text)
 

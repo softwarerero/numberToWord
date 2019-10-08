@@ -6,7 +6,7 @@ const esNumberWords = [
 ]
 
 
-export default number => {
+module.exports = number => {
     if (number > 199) throw new Error('The number is too big, we have no words for this')
     return number
         .toString()

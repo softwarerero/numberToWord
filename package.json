@@ -1,10 +1,10 @@
 {
   "name": "@softwarerero/numbertoword",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert numbers to words",
   "scripts": {
-    "test": "mocha --require esm",
-    "testw": "mocha --watch --require esm"
+    "test": "mocha",
+    "testw": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "author": "El Softwarerero",
   "license": "ISC",
   "devDependencies": {
-    "esm": "^3.2.25",
     "mocha": "^6.2.1"
-  }
+  },
+  "dependencies": {}
 }

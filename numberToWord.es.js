@@ -1,4 +1,4 @@
-import { splitFloat, makeBiggerWord } from './helpers.js'
+const H = require('./helpers.js')
 
 const UNITS = ['zero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve']
 const units = (number) => UNITS[number]
@@ -10,7 +10,7 @@ const decade1 = (unit, units) => unit >= 5 ? `${DECADES1[6]}${units(unit, this)}
 
 const deacadesAnd = (decade, unit) => unit > 0 ? `${DECADES3[decade]} y ${units(unit)}` : DECADES3[decade]
 const decades = (number) => {
-    const [decade, unit] = splitFloat(number, 10)
+    const [decade, unit] = H.splitFloat(number, 10)
     switch (decade) {
         case 0: return units(number)
         case 1: return decade1(unit, units)
@@ -21,18 +21,18 @@ const decades = (number) => {
 
 const HUNDREDS = ['ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos']
 const hundreds = number => {
-    const [hundreds, decs] = splitFloat(number, 100)
+    const [hundreds, decs] = H.splitFloat(number, 100)
     if (hundreds === 0) return decades(number)
     if (hundreds === 1) return decs === 0 ? 'cien' : `ciento${decades(decs)}`
     return `${HUNDREDS[hundreds - 1]}${decades(decs)}`
 }
 
-const thousands = number => makeBiggerWord(number, 1000, hundreds, 'un mil', 'mil')
-const millions = number => makeBiggerWord(number, 1000000, thousands, 'un millon', 'millones')
-const milliards = number => makeBiggerWord(number, 1000000000, millions, 'un millardo', 'millardos')
-const billions = number => makeBiggerWord(number, 1000000000000, milliards, 'un billón', 'billones')
+const thousands = number => H.makeBiggerWord(number, 1000, hundreds, 'un mil', 'mil')
+const millions = number => H.makeBiggerWord(number, 1000000, thousands, 'un millon', 'millones')
+const milliards = number => H.makeBiggerWord(number, 1000000000, millions, 'un millardo', 'millardos')
+const billions = number => H.makeBiggerWord(number, 1000000000000, milliards, 'un billón', 'billones')
 
-export default number => {
+module.exports = number => {
     if (number > 9999999999999) throw 'The number is too big, we have no words for this'
     var decimal = (number + '').split('.')[1]
     if (decimal) return `${billions(Math.floor(number))} con ${billions(decimal)}`

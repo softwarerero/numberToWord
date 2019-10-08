@@ -1,5 +1,5 @@
-import assert from 'assert'
-import numberToOrdinal from '../numberToOrdinal.es.js'
+const assert = require('assert')
+const numberToOrdinal = require('../numberToOrdinal.es.js')
 
 const equal = (no, text) => () => assert.equal(numberToOrdinal(no), text)
 
