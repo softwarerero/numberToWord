@@ -3,7 +3,7 @@ import numberToOrdinal from '../numberToOrdinal.es.js'
 
 const equal = (no, text) => () => assert.equal(numberToOrdinal(no), text)
 
-describe.only('es units', () => {
+describe('es units', () => {
     it('1', equal(1, 'primera'))
     it('5', equal(5, 'quinta'))
     it('9', equal(9, 'novena'))
