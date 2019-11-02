@@ -25,6 +25,7 @@ const hundreds = number => {
     const [hundreds, decs] = H.splitFloat(number, 100)
     if (hundreds === 0) return decades(number)
     if (hundreds === 1) return decs === 0 ? 'hundert' : `ein hundert ${decades(decs)}`
+    if (decs === 0) return `${UNITS[hundreds]} hundert`
     return `${UNITS[hundreds]} hundert ${decades(decs)}`
 }
 

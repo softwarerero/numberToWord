@@ -48,6 +48,8 @@ describe('es millons', () => {
     it('1111111', equal(1111111, 'un millon cientoonce mil cientoonce'))
     it('1234567', equal(1234567, 'un millon doscientostreinta y cuatro mil quinientossesenta y siete'))
     it('8612910', equal(8612910, 'ocho millones seiscientosdoce mil novecientosdiez'))
+    it('1200000', equal(1200000, 'un millon doscientos mil'))
+    it('1220000', equal(1220000, 'un millon doscientosveinte mil'))
 })
 
 describe('es milliard', () => {

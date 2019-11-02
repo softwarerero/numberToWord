@@ -46,6 +46,9 @@ describe('en millons', () => {
     it('1111111', equal(1111111, 'eine million ein hundert elf tausend ein hundert elf'))
     it('1234567', equal(1234567, 'eine million zwei hundert vierunddreissig tausend fünf hundert siebenundsechzig'))
     it('8612910', equal(8612910, 'acht millionen sechs hundert zwölf tausend neun hundert zehn'))
+    it('1200000', equal(1200000, 'eine million zwei hundert tausend'))
+    it('1220000', equal(1220000, 'eine million zwei hundert zwanzig tausend'))
+    it('1900020', equal(1900020, 'eine million neun hundert tausend zwanzig'))
 })
 
 describe('en milliard', () => {
