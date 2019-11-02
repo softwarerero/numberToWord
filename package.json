@@ -1,7 +1,9 @@
 {
   "name": "@softwarerero/numbertoword",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "license": "MIT",
   "description": "Convert numbers to words",
+  "repository": "https://github.com/softwarerero/numberToWord",
   "scripts": {
     "test": "mocha",
     "testw": "mocha --watch"

@@ -15,4 +15,5 @@ module.exports = number => {
         .map((n, i) => esNumberWords[i][n] || esNumberWords[i][0])
         .reverse()
         .join(' ')
+        .trim()
 }
