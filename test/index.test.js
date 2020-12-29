@@ -11,7 +11,7 @@ describe('numberToOrdinal', () => {
     })
 })
 
-describe.only('numberToWord', () => {
+describe('numberToWord', () => {
     const equal = (no, text, language) => () => assert.equal(numberToWord(no, language), text)
 
     it('numberToWord speaks no Danish', () => { 

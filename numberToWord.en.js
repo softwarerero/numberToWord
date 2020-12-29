@@ -6,6 +6,7 @@ const units = (number) => UNITS[number]
 const decade1 = (unit, units) => {
     if (unit <= 2) return ['ten', 'eleven', 'twelve'][unit]
     if (unit === 3) return `thirteen`
+    if (unit === 5) return `fifteen`
     if (unit === 8) return `eighteen`
     return `${UNITS[unit]}teen`
 }

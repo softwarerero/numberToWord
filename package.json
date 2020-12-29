@@ -1,19 +1,17 @@
 {
   "name": "@softwarerero/numbertoword",
   "version": "1.0.4",
-  "license": "MIT",
+  "license": "ISC",
   "description": "Convert numbers to words",
-  "repository": "https://github.com/softwarerero/numberToWord",
-  "scripts": {
-    "test": "mocha",
-    "testw": "mocha --watch"
-  },
   "repository": {
     "type": "git",
     "url": "github.com/softwarerero/numberToWord"
   },
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha",
+    "testw": "node_modules/mocha/bin/mocha --watch"
+  },
   "author": "El Softwarerero",
-  "license": "ISC",
   "devDependencies": {
     "mocha": "^6.2.1"
   },

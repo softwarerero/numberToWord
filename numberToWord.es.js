@@ -6,7 +6,16 @@ const units = (number) => UNITS[number]
 const DECADES1 = ['diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieci']
 const DECADES2 =  ['veinte', 'veinti']
 const DECADES3 =  ['treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa']
-const decade1 = (unit, units) => unit >= 5 ? `${DECADES1[6]}${units(unit, this)}` : DECADES1[unit]
+// const decade1 = (unit, units) => unit >= 5 ? `${DECADES1[6]}${units(unit, this)}` : DECADES1[unit]
+const decade1 = (unit, units) => {
+  console.log('decade1', unit, units, unit >= 5, DECADES1[6])
+  return unit >= 6 ? `${DECADES1[6]}${units(unit, this)}` : DECADES1[unit]
+  // unit >= 5 ? `DECADES1[6] : DECADES1[unit]
+  // if ()
+  // return  `${DECADES1[6]}${units(unit, this)}`
+  // console.log(DECADES1[unit])
+  // return DECADES1[unit]
+}
 
 const deacadesAnd = (decade, unit) => unit > 0 ? `${DECADES3[decade]} y ${units(unit)}` : DECADES3[decade]
 const decades = (number) => {

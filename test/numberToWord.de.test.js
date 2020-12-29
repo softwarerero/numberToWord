@@ -13,6 +13,7 @@ describe('en units', () => {
 describe('en decades', () => {
     it('10', equal(10, 'zehn'))
     it('11', equal(11, 'elf'))
+    it('15', equal(15, 'fünfzehn'))
     it('18', equal(18, 'achtzehn'))
     it('20', equal(20, 'zwanzig'))
     it('23', equal(23, 'dreiundzwanzig'))
@@ -49,6 +50,7 @@ describe('en millons', () => {
     it('1200000', equal(1200000, 'eine million zwei hundert tausend'))
     it('1220000', equal(1220000, 'eine million zwei hundert zwanzig tausend'))
     it('1900020', equal(1900020, 'eine million neun hundert tausend zwanzig'))
+    it('1515015', equal(15015015, 'fünfzehn millionen fünfzehn tausend fünfzehn'))
 })
 
 describe('en milliard', () => {
